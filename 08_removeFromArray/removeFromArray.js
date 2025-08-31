@@ -1,6 +1,6 @@
-const removeFromArray = function(array, removeItem) {
-    let removeIndex = array.findIndex((currentItem) => currentItem === removeItem);
-    array.splice(removeIndex, 1)
+const removeFromArray = function(array) {
+    removeItems = Array.from(arguments).slice(1);
+    array = array.filter((currentItem) => !(removeItems.includes(currentItem)));
     return array
 };
 
